@@ -1,0 +1,49 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+const highlights = [
+  {
+    title: 'Backend-focused',
+    description: 'Deep expertise across the Java and Golang ecosystems for server-side engineering.',
+  },
+  {
+    title: 'Distributed systems',
+    description: 'Designing microservices that communicate reliably and scale independently.',
+  },
+  {
+    title: 'Production-ready',
+    description: 'Clean logic and normalized relational schemas that hold up in real workloads.',
+  },
+];
+---
+
+<section id="about" class="scroll-mt-20 py-24">
+  <div class="mx-auto max-w-5xl px-6">
+    <SectionHeading
+      eyebrow="About"
+      title="About Me"
+      description="A quick introduction to who I am and how I approach engineering."
+    />
+
+    <div class="mx-auto max-w-3xl">
+      <p class="text-lg leading-relaxed text-muted-foreground">
+        I am a Software Engineer specializing in robust backend development, distributed microservices, and
+        custom RESTful APIs. I am deeply committed to writing clean server-side logic, designing normalized
+        relational database schemas, and translating complex business requirements into scalable,
+        production-ready architectures. I am highly adaptable and capable of leveraging various modern
+        programming paradigms to ensure high availability and system reliability.
+      </p>
+
+      <div class="mt-12 grid gap-4 sm:grid-cols-3">
+        {
+          highlights.map((item) => (
+            <div class="rounded-xl border border-border bg-card p-5">
+              <h3 class="text-sm font-semibold">{item.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

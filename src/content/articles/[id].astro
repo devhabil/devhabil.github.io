@@ -1,0 +1,39 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map(article => ({
+    params: { id: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<Layout title={`${article.data.title} | Portofolio`}>
+  <main style="padding: 2rem; max-width: 800px; margin: 0 auto;">
+    <a href="/articles" style="text-decoration: none; color: #4ade80;">&larr; Kembali ke Daftar Artikel</a>
+    
+    <article style="margin-top: 2rem;">
+      <h1 style="margin-bottom: 0.5rem; font-size: 2.5rem;">{article.data.title}</h1>
+      
+      <time datetime={article.data.pubDate.toISOString()} style="color: #888; font-size: 0.9rem;">
+        Diterbitkan pada: {article.data.pubDate.toLocaleDateString('id-ID', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        })}
+      </time>
+      
+      <hr style="margin: 2rem 0; border: none; border-top: 1px solid #333;" />
+      
+      <div style="line-height: 1.8; font-size: 1.1rem; color: #eee;">
+        <Content />
+      </div>
+    </article>
+  </main>
+</Layout>

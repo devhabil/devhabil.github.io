@@ -1,0 +1,20 @@
+---
+interface Props {
+  text: string;
+  variant?: 'default' | 'primary';
+  size?: 'sm' | 'md';
+}
+
+const { text, variant = 'default', size = 'sm' } = Astro.props;
+
+const variantClass =
+  variant === 'primary'
+    ? 'border-primary/30 bg-primary/10 text-primary'
+    : 'border-border bg-secondary/60 text-secondary-foreground';
+
+const sizeClass = size === 'md' ? 'px-4 py-1.5 text-sm' : 'px-3 py-1 text-xs';
+---
+
+<span class:list={['inline-flex items-center rounded-full border font-medium', variantClass, sizeClass]}>
+  {text}
+</span>

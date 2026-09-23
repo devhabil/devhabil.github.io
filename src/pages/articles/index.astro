@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/BaseLayout.astro';
+
+const allArticles = await getCollection('articles');
+const sortedArticles = allArticles.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout title="Articles | Portofolio">
+  <main style="padding: 2rem; max-width: 800px; margin: 0 auto;">
+    <h1 style="margin-top: 1rem; font-size: 2rem; font-weight: bold;">Daftar Artikel</h1>
+    
+    <ul style="list-style-type: none; padding: 0; margin-top: 2rem;">
+      {sortedArticles.map((article) => (
+        <li style="margin-bottom: 2rem; border-bottom: 1px solid #333; padding-bottom: 1rem;">
+          <h2 style="margin-bottom: 0.5rem; font-size: 1.5rem;">
+            <a href={`/articles/${article.id}`} style="text-decoration: none; color: #4ade80;">
+              {article.data.title}
+            </a>
+          </h2>
+          <time datetime={article.data.pubDate.toISOString()} style="color: #888; font-size: 0.9rem;">
+            {article.data.pubDate.toLocaleDateString('id-ID', {
+              day: 'numeric', month: 'long', year: 'numeric'
+            })}
+          </time>
+          <p style="margin-top: 0.5rem; color: #ccc;">{article.data.excerpt}</p>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Layout>

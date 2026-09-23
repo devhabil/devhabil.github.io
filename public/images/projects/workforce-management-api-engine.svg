@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="'Inter', system-ui, -apple-system, sans-serif">
+  <!-- Backdrop -->
+  <rect width="1200" height="675" fill="#09090b"/>
+
+  <!-- Window -->
+  <rect x="40" y="36" width="1120" height="604" rx="14" fill="#101013" stroke="#27272a" stroke-width="1.5"/>
+  <rect x="40" y="36" width="1120" height="48" rx="14" fill="#141417"/>
+  <rect x="40" y="60" width="1120" height="24" fill="#141417"/>
+  <line x1="40" y1="84" x2="1160" y2="84" stroke="#27272a" stroke-width="1"/>
+  <circle cx="72" cy="60" r="6" fill="#ff5f57"/>
+  <circle cx="96" cy="60" r="6" fill="#febc2e"/>
+  <circle cx="120" cy="60" r="6" fill="#28c840"/>
+  <rect x="460" y="47" width="280" height="26" rx="13" fill="#18181b" stroke="#27272a"/>
+  <text x="600" y="64" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#71717a">api.workforce-engine/v1</text>
+
+  <!-- Header -->
+  <text x="240" y="132" font-size="20" font-weight="700" fill="#fafafa">API Engine Console</text>
+  <text x="240" y="154" font-size="12" fill="#71717a">Every request validated against its declared contract before execution</text>
+
+  <!-- Endpoints panel -->
+  <rect x="240" y="180" width="320" height="420" rx="10" fill="#141417" stroke="#27272a"/>
+  <rect x="260" y="200" width="90" height="8" rx="4" fill="#3f3f46"/>
+
+  <!-- Active endpoint row -->
+  <rect x="252" y="224" width="296" height="36" rx="8" fill="#18181b" stroke="#27272a"/>
+  <rect x="262" y="231" width="46" height="22" rx="6" fill="#10b981" fill-opacity="0.14" stroke="#10b981" stroke-opacity="0.4"/>
+  <text x="285" y="246" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#34d399">GET</text>
+  <text x="318" y="246" font-family="Consolas, monospace" font-size="12" fill="#e4e4e7">/v1/shifts</text>
+
+  <!-- Other endpoints -->
+  <g font-family="Consolas, monospace" font-size="12" fill="#71717a">
+    <rect x="262" y="287" width="46" height="22" rx="6" fill="#1c1c1f" stroke="#27272a"/>
+    <text x="285" y="302" text-anchor="middle" font-size="11" font-weight="700" fill="#a1a1aa">POST</text>
+    <text x="318" y="302" fill="#71717a">/v1/shifts</text>
+
+    <rect x="262" y="343" width="46" height="22" rx="6" fill="#1c1c1f" stroke="#27272a"/>
+    <text x="285" y="358" text-anchor="middle" font-size="11" font-weight="700" fill="#a1a1aa">GET</text>
+    <text x="318" y="358">/v1/assignments</text>
+
+    <rect x="262" y="399" width="46" height="22" rx="6" fill="#1c1c1f" stroke="#27272a"/>
+    <text x="285" y="414" text-anchor="middle" font-size="11" font-weight="700" fill="#a1a1aa">POST</text>
+    <text x="318" y="414">/v1/employees</text>
+
+    <rect x="262" y="455" width="46" height="22" rx="6" fill="#1c1c1f" stroke="#27272a"/>
+    <text x="285" y="470" text-anchor="middle" font-size="11" font-weight="700" fill="#a1a1aa">GET</text>
+    <text x="318" y="470">/v1/reports/summary</text>
+  </g>
+
+  <!-- Validation rules note -->
+  <rect x="260" y="520" width="280" height="60" rx="8" fill="#10b981" fill-opacity="0.06" stroke="#10b981" stroke-opacity="0.25"/>
+  <text x="276" y="545" font-size="11" fill="#71717a">Validation rules declared per contract —</text>
+  <text x="276" y="562" font-size="11" fill="#71717a">applied automatically to all endpoints</text>
+
+  <!-- Response panel -->
+  <rect x="590" y="180" width="550" height="420" rx="10" fill="#0c0c0e" stroke="#27272a"/>
+  <rect x="610" y="200" width="130" height="8" rx="4" fill="#3f3f46"/>
+  <rect x="1014" y="192" width="106" height="26" rx="13" fill="#10b981" fill-opacity="0.14" stroke="#10b981" stroke-opacity="0.4"/>
+  <text x="1067" y="209" text-anchor="middle" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#34d399">200 OK</text>
+
+  <!-- JSON response -->
+  <g font-family="Consolas, monospace" font-size="13">
+    <text x="610" y="256" fill="#52525b">1</text>
+    <text x="650" y="256" fill="#71717a">{</text>
+
+    <text x="610" y="280" fill="#52525b">2</text>
+    <text x="650" y="280"><tspan fill="#71717a">  </tspan><tspan fill="#34d399">"meta"</tspan><tspan fill="#71717a">: { </tspan><tspan fill="#34d399">"status"</tspan><tspan fill="#71717a">: </tspan><tspan fill="#fbbf24">200</tspan><tspan fill="#71717a"> },</tspan></text>
+
+    <text x="610" y="304" fill="#52525b">3</text>
+    <text x="650" y="304"><tspan fill="#71717a">  </tspan><tspan fill="#34d399">"data"</tspan><tspan fill="#71717a">: [</tspan></text>
+
+    <text x="610" y="328" fill="#52525b">4</text>
+    <text x="650" y="328" fill="#71717a">    {</text>
+
+    <text x="610" y="352" fill="#52525b">5</text>
+    <text x="650" y="352"><tspan fill="#71717a">      </tspan><tspan fill="#34d399">"shiftId"</tspan><tspan fill="#71717a">: </tspan><tspan fill="#e4e4e7">"SFT-0421"</tspan><tspan fill="#71717a">,</tspan></text>
+
+    <text x="610" y="376" fill="#52525b">6</text>
+    <text x="650" y="376"><tspan fill="#71717a">      </tspan><tspan fill="#34d399">"employeeId"</tspan><tspan fill="#71717a">: </tspan><tspan fill="#e4e4e7">"EMP-1187"</tspan><tspan fill="#71717a">,</tspan></text>
+
+    <text x="610" y="400" fill="#52525b">7</text>
+    <text x="650" y="400"><tspan fill="#71717a">      </tspan><tspan fill="#34d399">"location"</tspan><tspan fill="#71717a">: </tspan><tspan fill="#e4e4e7">"JKT-01"</tspan><tspan fill="#71717a">,</tspan></text>
+
+    <text x="610" y="424" fill="#52525b">8</text>
+    <text x="650" y="424"><tspan fill="#71717a">      </tspan><tspan fill="#34d399">"validated"</tspan><tspan fill="#71717a">: </tspan><tspan fill="#fbbf24">true</tspan></text>
+
+    <text x="610" y="448" fill="#52525b">9</text>
+    <text x="650" y="448" fill="#71717a">    }</text>
+
+    <text x="610" y="472" fill="#52525b">10</text>
+    <text x="650" y="472" fill="#71717a">  ],</text>
+
+    <text x="610" y="496" fill="#52525b">11</text>
+    <text x="650" y="496"><tspan fill="#71717a">  </tspan><tspan fill="#34d399">"errors"</tspan><tspan fill="#71717a">: []</tspan></text>
+
+    <text x="610" y="520" fill="#52525b">12</text>
+    <text x="650" y="520" fill="#71717a">}</text>
+  </g>
+
+  <!-- Validation banner -->
+  <rect x="610" y="544" width="510" height="36" rx="8" fill="#10b981" fill-opacity="0.08" stroke="#10b981" stroke-opacity="0.3"/>
+  <circle cx="632" cy="562" r="8" fill="none" stroke="#34d399" stroke-width="1.5"/>
+  <path d="m628 562 3 3 5-6" fill="none" stroke="#34d399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="650" y="566" font-family="Consolas, monospace" font-size="12" fill="#34d399">payload validated — 0 errors, 12/12 rules passed</text>
+</svg>
