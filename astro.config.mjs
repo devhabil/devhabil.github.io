@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://devhabil.github.io',
-  base: '/website-portofolio',
   vite: {
     plugins: [tailwindcss()]
   }
